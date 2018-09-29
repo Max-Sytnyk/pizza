@@ -1,0 +1,215 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.header {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.input:checked ~ .container-pizza-grid {
+  display: none;
+}
+
+.input:checked ~ .container-pizza-list {
+  display: block;
+}
+
+.container-pizza-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1200px;
+  margin: 1rem auto;
+}
+
+.pizza-grid {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  height: auto;
+  padding: 0.5rem;
+  border: 0.125rem solid blue;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.pizza-photo-grid {
+  display: block;
+  margin: 0 auto;
+}
+
+.pizza-grid p {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  line-height: 100%;
+}
+
+.info {
+  padding: 0.3rem 0;
+}
+
+.info.left {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.pizza-grid .info:last-child {
+  width: 70%;
+  text-align: end;
+}
+
+.pizza-grid .name::before {
+  content: url(icons-1.png);
+  max-width: 100%;
+  margin-top: -2rem;
+  padding-top: 1rem;
+}
+
+.pizza-grid .consist::before {
+  content: url(icons-2.png);
+  margin-top: -2rem;
+  padding-top: 1rem;
+}
+
+.pizza-grid .calories::before {
+  content: url(icons-3.png);
+  margin-top: -2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pizza-grid .price::before {
+  content: url(icons-4.png);
+  margin-top: -2rem;
+  padding-top: 1rem;
+}
+
+.container-pizza-list {
+  display: none;
+  margin: 1rem;
+}
+
+.ul-pizza-list li * {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1280px) {
+  .container-pizza-grid {
+    width: 1000px;
+  }
+
+  .pizza-grid {
+    width: 23%;
+  }
+
+  .pizza-photo-grid {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .container-pizza-grid {
+    width: 780px;
+  }
+
+  .pizza-grid {
+    width: 30%;
+  }
+
+  .pizza-photo-grid {
+    max-width: 175px;
+    max-height: 175px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container-pizza-grid {
+    width: 600px;
+    font-size: 14px;
+  }
+
+  .pizza-grid {
+    width: 30%;
+  }
+
+}
+
+@media screen and (max-width: 620px) {
+  .container-pizza-grid {
+    width: 470px;
+  }
+
+  .pizza-grid {
+    width: 45%;
+  }
+
+  .pizza-photo-grid {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .info.left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .container-pizza-grid {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .pizza-grid {
+    width: 100%;
+  }
+
+  .pizza-photo-grid {
+    max-width: 175px;
+    max-height: 175px;
+  }
+
+}
