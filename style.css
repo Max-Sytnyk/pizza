@@ -42,6 +42,14 @@ table {
 	border-spacing: 0;
 }
 
+body {
+  background-image: url(background-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed ;
+  background-color: white;
+}
+
 .header {
   font-size: 1.5rem;
   padding: 1rem;
@@ -212,4 +220,8 @@ table {
     max-height: 175px;
   }
 
+}
+
+.hidden {
+  display: none;
 }
